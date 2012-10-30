@@ -7,10 +7,10 @@ ruby中直接字面量有整数，浮点数，字符串，字符，true，false�
 但是ruby是面向对象语言，所有值都是对象，没有基本类型与对象类型的区别。
 
 例如需要求绝对值，在javascript中：<br>
-	var num = -1234;
-	num = Math.abs(num); //=>1234
-	而在ruby中：
-	num = -1234.abs //=>1234
+<pre><code>var num = -1234;
+num = Math.abs(num); //=>1234</code></pre>
+而在ruby中：<br>
+<pre><code>num = -1234.abs //=>1234</code></pre>
 
 <br>
 
