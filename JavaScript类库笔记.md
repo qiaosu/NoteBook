@@ -1,7 +1,7 @@
 JavaScript类库笔记
 =======
 
-###klass
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">klass</div>
 `class`
 
 <https://github.com/ded/klass>
@@ -80,3 +80,5 @@ bar.swim(); //'swim'
 3. 通过.implement方法实现mixin。
 
 `todo` 尝试提供一个最小集。
+
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Backbone.Event</div>
