@@ -155,3 +155,24 @@ vA.letBFly();
 
 混入这种方式配合Underscore的_.bind或者\_.bindAll方法可以更好的工作。
 	
+
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Underscore常用方法</div>
+`functional`
+
+#####_.bind
+把一个function绑定给一个object，任何时候调用方法，this都指向此object。随意的给函数绑定参数，预先设置这些参数，也称作currying。
+
+在Arale1.1中，
+<pre><code>var View = klass({
+  initialize: function(){
+    this.bind();
+  },
+  bind: function(){
+    $E.on($('dom_id'), 'click', _.bind(this.fly, this));
+  },
+  fly: function(){
+    alert('fly');
+  }	
+});</code></pre>
+
+
