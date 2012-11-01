@@ -63,3 +63,23 @@ Ruby区间存在于任何地方，如：1到12月。Ruby用区间实现了3个�
 "..."：而三个点号创建一个右开区间(即右边界不取值）a...b——[a,b)<br>
 to_a方法可以把区间转换成列表
 
+<br>
+
+`小标题` Rake集成Rspec
+
+创建一个名为"Rakefile"的文件。
+
+<pre><code>require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
+task :default => :spec</code></pre>
+
+创建测试文件"spec/thing_spec.rb"。
+
+<pre><code>describe "something" do
+  it "does something" do
+    # pass
+  end
+end</code></pre>
+
+运行rake。 > bundle exec rake
+
