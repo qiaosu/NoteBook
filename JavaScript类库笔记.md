@@ -159,6 +159,8 @@ vA.letBFly();
 ###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Underscore常用方法</div>
 `functional`
 
+<http://underscorejs.org/>
+
 #####_.bind
 把一个function绑定给一个object，任何时候调用方法，this都指向此object。随意的给函数绑定参数，预先设置这些参数，也称作currying。
 
@@ -198,3 +200,21 @@ _.template(list, {people : ['moe', 'curly', 'larry']});
 
 #####_.each
 Arale1.1中的$A($$('.class')).each实在有点2，可以考虑使用\_.each代替。
+
+
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Backbone</div>
+`architecture`
+
+<http://backbonejs.org/>
+
+以事件为基础，隔离数据与视图，并提供Route支持的类库。
+
+隔离数据与视图是最重要的一条原则，也是选用Backbone是否合适的一条标准。
+
+我个人的标准是我能否用到Collection，我认为Backbone最出彩的部分是提供了Model和Collection两个大类以及这两个类中提供的方法集。
+
+数据轻交互重的项目可以把Event和View拿出来自行实现。在数据轻的环境下Route(包括History)也可以采用Sammy.js来取代。
+
+此外，Backbone的一大优点是文档质量高，且社区活跃。
+
+注：Route目前还是比较推荐由后端来提供。
