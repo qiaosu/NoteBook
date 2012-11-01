@@ -176,3 +176,25 @@ vA.letBFly();
 });</code></pre>
 
 
+#####_.template
+关于前端模板引擎的选择：
+
+1. 无所谓性能；
+2. 替换变量的格式，个人偏好于{{ key }}（Mustache style），但这个并非关键；
+3. 可以预定义模板；
+4. 使用String而非DOM。
+
+既然Underscore中的template已经满足于以上这些条件，我觉得没有必要选择其他。
+
+<pre><code>var compiled = _.template("hello: <%= name %>");
+compiled({name : 'moe'});
+=> "hello: moe"
+
+var list = "&lt;% _.each(people, function(name) { %&gt; &lt;li&gt;&lt;%= name %&gt;&lt;/li&gt; &lt;% }); %&gt;";
+_.template(list, {people : ['moe', 'curly', 'larry']});
+=> "&lt;li&gt;moe&lt;/li&gt;&lt;li&gt;curly&lt;/li&gt;&lt;li&gt;larry&lt;/li&gt;"</code></pre>
+
+如果遇到Single Page Application之类富前端项目，可以考虑替换为[handlebarsjs](http://handlebarsjs.com/)作为模板引擎。
+
+#####_.each
+Arale1.1中的$A($$('.class')).each实在有点2，可以考虑使用\_.each代替。
