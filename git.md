@@ -34,6 +34,7 @@ $ git merge upstream/master</code></pre>
 ####Submodule
 
 <http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/>
+<http://www.kafeitu.me/git/2012/03/27/git-submodule.html>
 
 **Add**
 
