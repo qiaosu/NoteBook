@@ -1,6 +1,10 @@
 Ruby入门笔记
 =======
 
+
+###语法特性
+<br/>
+
 `小标题` 直接字面量
 
 ruby中直接字面量有整数，浮点数，字符串，字符，true，false，nil
@@ -82,4 +86,109 @@ task :default => :spec</code></pre>
 end</code></pre>
 
 运行rake。 > bundle exec rake
+
+
+###OO与模块化
+<br/>
+
+`Module` The Most Important Kind of Object
+
+<pre><code>module Dog
+  def self.bark
+    "bow wow"
+  end
+end</code></pre>
+
+一个基本的Module例子，其中self.bark定义的是类方法。类方法也叫做静态方法，通过类名来进行调用。而实例方法，则需要new出来一个实例后才能使用。
+
+__Module的定义是一段立即执行代码。__
+
+__Module是一个命名空间。__
+
+<br/>
+
+`Class` Module + Inheritance
+
+<pre><code>class Dog
+  def self.bark
+    "bow wow"
+  end
+end
+class Poodle < Dog
+end
+puts Poodle.bark #=> bow wow</code></pre>
+
+__一等公民__
+
+与类方法，静态方法类似的是类变量与实例变量的组合。@@Variable表示类变量，无需new实例出来即可以使用，而@表示实例变量，需要配合实例使用。
+
+<br/>
+
+`Mixins`
+
+Ruby中通过include一个模块来实现Mixin。
+
+<pre><code>module Flyer
+  def fly
+    "wheeee!"
+  end
+end
+class Bird
+  include(Flyer)
+end
+eagle = Bird.new
+puts eagle.fly #=> wheeee!</code></pre>
+
+并且当一个模块发生改变时，这种改变通常会立刻影响到Mixin这个模块的所有对象。
+
+<pre><code>module Flyer
+  def fly
+    "wheeee!"
+  end
+end
+class Bird
+  include(Flyer)
+end
+eagle = Bird.new
+Kernel.puts(eagle.fly) #=> wheeee!
+module Flyer
+  def land
+    "aaaaah"
+  end
+end
+puts eagle.land #=> aaaaah</code></pre>
+
+<br/>
+
+`Singleton`
+
+Singleton: 在某种情况下可能需要某个特定的类实例拥有一些方法，而同样继承自此类的其他实例则没有。
+
+几种创建Singleton单例的方式，基本方式是Ruby中允许给实例单独添加方法。
+
+<pre><code>class Dog
+  def bark
+    "bow wow"
+  end
+end
+fido = Dog.new
+rover = Dog.new
+def fido.fetch
+  "pant pant slobber slobber"
+end</code></pre>
+
+或者：
+
+<pre><code>class << fido
+  def fetch
+    "pant pant slobber slobber"
+  end
+end</code></pre>
+
+<pre><code>module Fetcher
+  def fetch
+    "pant pant slobber slobber"
+  end
+end
+fido.extend(Fetcher)</code></pre>
 
