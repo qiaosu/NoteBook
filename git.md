@@ -1,6 +1,24 @@
 Git
 =======
 
+####Remote
+
+关联存在的remote
+
+<pre><code>$ git remote add origin https://github.com/user/repo.git
+# Set a new remote
+git remote add heroku git@heroku.com:repo.git </code></pre>
+
+修改remote url
+
+<pre><code>$ git remote set-url origin https://github.com/user/repo2.git
+# Change the 'origin' remote's URL</code></pre>
+
+移除remote
+
+<pre><code>$ git remote rm destination
+# Remove remote</code></pre>
+
 ####同步fork的repo
 
 <https://help.github.com/articles/syncing-a-fork>
