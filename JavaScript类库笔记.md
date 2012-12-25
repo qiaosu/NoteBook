@@ -218,3 +218,23 @@ Arale1.1中的$A($$('.class')).each实在有点2，可以考虑使用\_.each代�
 此外，Backbone的一大优点是文档质量高，且社区活跃。
 
 注：Route目前还是比较推荐由后端来提供。
+
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Knockout</div>
+`architecture`
+
+<http://knockoutjs.com/>
+
+knockoutjs不提供Api文档，自己解构一下。
+
+knockoutjs中的数据结构由`observable`和`observableArray`组成，分别对应于Backbone中的model和collection的概念。
+
+`observable`：提供了基本的get, set功能，并在值变化的前后抛出事件。<br>
+`observableArray`：在observable的基础上提供了collection需要的一些扩展方法，remove，sort，destroy等。
+
+**VM的概念**
+
+A view model: a pure-code representation of the data and operations on a UI.
+
+knockoutjs提供了丰富的`Bindings`。参考官网文档。
+
+将此两者建立关联的是ko.applyBindings(new Model());
