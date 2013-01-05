@@ -238,3 +238,15 @@ A view model: a pure-code representation of the data and operations on a UI.
 knockoutjs提供了丰富的`Bindings`。参考官网文档。
 
 将此两者建立关联的是ko.applyBindings(new Model());
+
+**事件通信**
+
+ko.subscribable
+
+![](http://knockoutjs.com/documentation/images/fn/type-hierarchy.png)
+
+method: 
+
+* subscribe
+* notifySubscribers
+* getSubscriptionsCount
