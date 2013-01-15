@@ -250,3 +250,33 @@ method:
 * subscribe
 * notifySubscribers
 * getSubscriptionsCount
+
+###<div style="border-top: dotted 1px #ccc;margin-top:2em;">Paper</div>
+`graphic`
+
+<http://paperjs.org/>
+
+两种使用方式：
+
+1. PaperScript 改变&扩展了一些原生js的基础语法。
+2. JavaScript Directly
+最重要的，使用原生js，就无法使用Paper提供的基于Point和Size的一些操作符。
+
+基础元件：
+
+- 点，Point
+- 抽象尺寸，Size
+- 矩形，Rectangle
+
+PaperScript操作符
++-*/都可以针对多维，例如：
+<pre><code>var point1 = new Point(10, 20);
+var point2 = point1 * 4;
+console.log(point2); // { x: 40, y: 80 }</code></pre>
+
+**Vector Geometry**
+
+Vector geometry is a first class citizen in Paper.js.
+
+详细看：[http://paperjs.org/tutorials/geometry/vector-geometry/](http://paperjs.org/tutorials/geometry/vector-geometry/)
+
