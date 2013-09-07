@@ -97,3 +97,21 @@ $ git checkout master #第一次或者执行过sync.
 $ git status
 
 $ git pull</code></pre>
+
+
+**git pull 使用法**
+
+1. 用 rebase 尽量减少多余的 merge commit
+
+<pre><code>git pull --rebase</code></pre>
+
+2. pull 特定分支例
+
+<pre><code>git pull --rebase origin a-black-and-thick-branch</code></pre>
+
+3. rebase 冲突了, 又不喜欢一步一步的 git rebase 怎么办?
+
+<pre><code>git rebase --abort
+    git reset --hard HEAD
+    git pull
+    git status</code></pre>
