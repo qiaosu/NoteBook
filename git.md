@@ -99,7 +99,7 @@ $ git status
 $ git pull</code></pre>
 
 
-**git pull 使用法**
+####git pull 使用法
 
 1. 用 rebase 尽量减少多余的 merge commit
 
