@@ -10,7 +10,7 @@ Tech_NoteBook
 ### 分类归档
 #### React
 - [官方文档中提到的一些实现细节](https://github.com/qiaosu/tech_notebook/issues/9) - 进行中
-- [React性能优化实践](https://github.com/qiaosu/tech_notebook/issues/10) - 进行中
+- [React性能优化实践](https://github.com/qiaosu/tech_notebook/issues/10)
 
 #### Vue
 
