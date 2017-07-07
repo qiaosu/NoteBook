@@ -11,6 +11,7 @@ Tech_NoteBook
 #### React
 - [官方文档中提到的一些实现细节](https://github.com/qiaosu/tech_notebook/issues/9) - 进行中
 - [React性能优化实践](https://github.com/qiaosu/tech_notebook/issues/10)
+- [最佳实践](https://github.com/qiaosu/tech_notebook/issues/11)
 
 #### Vue
 
